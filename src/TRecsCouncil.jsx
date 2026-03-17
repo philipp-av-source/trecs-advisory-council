@@ -155,7 +155,7 @@ export default function TRecsCouncil() {
   };
 
   const callAPI = async (sys, msgs, maxTokens = 1000) => {
-    const resp = await fetch("https://api.anthropic.com/v1/messages", {
+    const resp = await fetch("/api/anthropic/v1/messages", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ model: "claude-sonnet-4-20250514", max_tokens: maxTokens, system: sys, messages: msgs }),
